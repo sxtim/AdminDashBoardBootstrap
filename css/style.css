@@ -1,0 +1,24 @@
+body {
+    border: red dotted;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+.container{
+    border: red dotted;
+    position: absolute;
+    display: block;
+    margin: 200px 0 0 200px;
+    width: 200px;
+    height: 200px;
+    /*расстояние между осью z и пользователем (для перспективы)*/
+    perspective: 500px;
+}
+
+
+
+
+
+h1 {
+    color: azure;
+}
