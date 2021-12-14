@@ -39,7 +39,7 @@ body {
     /*border: white 5px solid;*/
     /*видимость обратной стороны*/
     backface-visibility: hidden;
-    /*box-shadow: 0 0 20px cyan;*/
+    box-shadow: 0 0 20px cyan;
     background: linear-gradient(#151515, cyan) ;
 }
 .top  {
