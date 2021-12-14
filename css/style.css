@@ -18,7 +18,17 @@ body {
     width: inherit;
     height: inherit;
     /*определяет как дочерние элементы должны отображаться в пространстве*/
-    transform-style: preserve-3d;
+    transform-style:preserve-3d;
+    animation: cube 10s linear infinite;
+}
+@keyframes cube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+
 }
 .side {
     position: absolute;
@@ -26,11 +36,29 @@ body {
     height: inherit;
     text-align: center;
     color: azure;
-    border: azure 5px solid;
+    /*border: white 5px solid;*/
+    /*видимость обратной стороны*/
+    backface-visibility: hidden;
+    /*box-shadow: 0 0 20px cyan;*/
+    background: linear-gradient(#151515, cyan) ;
 }
-
-
-
-h1 {
-    color: azure;
+.top  {
+    transform: rotateX(90deg) translateZ(100px);
+    background: black;
+}
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+    background: cyan;
+}
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.front {
+    transform: translateZ(100px);
+}
+.back {
+    transform: rotateY(180deg) translateZ(100px);
 }
